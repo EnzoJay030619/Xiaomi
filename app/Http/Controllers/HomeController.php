@@ -26,13 +26,14 @@ class HomeController extends Controller
      */
     public function index()
     {
+     
     return view('home');
     }
     public function staffHome()
     {
-        $users = DB::table('users')->count();
+        $users = User::all();
         $products = Product::all();
-        return view('staffHome', compact('products'));
+        return view('staffHome', compact('products','users'));
     }
 
 

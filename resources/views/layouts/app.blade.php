@@ -7,7 +7,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>Xiaomi Global | Parody System|Mi.com- Mi Global Home</title>
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
@@ -15,32 +15,47 @@
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
-
+    <link rel="shortcut icon" type="image/x-icon" href="{{asset('images/xiaomi.png')}}">
+	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,400italic,700,700italic,900,900italic&amp;subset=latin,latin-ext" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Open%20Sans:300,400,400italic,600,600italic,700,700italic&amp;subset=latin,latin-ext" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="../../assets/css/animate.css">
+	<link rel="stylesheet" type="text/css" href="../../assets/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="../../assets/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="../../assets/css/owl.carousel.min.css">
+	<link rel="stylesheet" type="text/css" href="../../assets/css/chosen.min.css">
+	<link rel="stylesheet" type="text/css" href="../../assets/css/style.css">
+	<link rel="stylesheet" type="text/css" href="../../assets/css/color-01.css">
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
-<body>
-    <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
-            <div class="container">
-                <a class="navbar-brand d-flex"  href="{{ url('/') }}">
-                <div><img src="{{asset('images/xiaomi.png')}} " style="height: 25px; border-right: 1px solid #333" class="pr-3" ></div>
-                <div class="pl-3">Xiaomi</div>
-                </a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
 
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <!-- Left Side Of Navbar -->
-                    <ul class="navbar-nav mr-auto">
+<body class="home-page home-01 ">
+<div id="app">
+	<!-- mobile menu -->
+    <div class="mercado-clone-wrap">
+        <div class="mercado-panels-actions-wrap">
+            <a class="mercado-close-btn mercado-close-panels" href="#"></a>
+        </div>
+        <div class="mercado-panels"></div>
+    </div>
 
-                    </ul>
-
-                    <!-- Right Side Of Navbar -->
-                    <ul class="navbar-nav ml-auto">
-                        <!-- Authentication Links -->
-                        @guest
+	<!--header-->
+	<header id="header" class="header header-style-1">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="topbar-menu-area">
+					<div class="container">
+						<div class="topbar-menu left-menu">
+							<ul>
+								<li class="menu-item" >
+									<a title="Hotline: (+123) 456 789" href="#" ><span class="icon label-before fa fa-mobile"></span>Hotline: (+123) 456 789</a>
+								</li>
+							</ul>
+						</div>
+						<div class="topbar-menu right-menu">
+							<ul>
+                           <!-- Authentication Links -->
+                           @guest
                             @if (Route::has('login'))
                                 <li class="nav-item">
                                     <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
@@ -70,14 +85,136 @@
                                 </div>
                             </li>
                         @endguest
-                    </ul>
-                </div>
-            </div>
-        </nav>
+								<li class="menu-item lang-menu menu-item-has-children parent">
+									<a title="English" href="#"><span class="img label-before"></span>English<i class="fa fa-angle-down" aria-hidden="true"></i></a>
+									<ul class="submenu lang" >
+										<li class="menu-item" ><a title="malay" href="#"><span class=""></span>Malay</a></li>
+                    <li class="menu-item" ><a title="Chinese" href="#"><span class=""></span>Chinese</a></li>
+									</ul>
+								</li>
+								<li class="menu-item menu-item-has-children parent" >
+									<a title="Dollar (USD)" href="#">Dollar (USD)<i class="fa fa-angle-down" aria-hidden="true"></i></a>
+									<ul class="submenu curency" >
+										<li class="menu-item" >
+											<a title="Pound (GBP)" href="#">Pound (GBP)</a>
+										</li>
+										<li class="menu-item" >
+											<a title="Euro (EUR)" href="#">Euro (EUR)</a>
+										</li>
+										<li class="menu-item" >
+											<a title="Dollar (USD)" href="#">Dollar (USD)</a>
+										</li>
+                    <li class="menu-item" >
+											<a title="Ringgit (RM)" href="#">Ringgit (RM)</a>
+										</li>
+									</ul>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+                
+			</div>
+		</div>
+        <div class="container">
+					<div class="mid-section main-info-area">
 
-        <main class="py-4">
-            @yield('content')
-        </main>
-    </div>
+						<div class="wrap-logo-top left-section">
+							<a href="index.html" class="link-to-home"><img src="{{asset('images/xiaomi.png')}}" alt="" style="width:50px;"></a>
+						</div>
+
+						<div class="wrap-search center-section">
+							<div class="wrap-search-form">
+								<form action="#" id="form-search-top" name="form-search-top">
+									<input type="text" name="search" value="" placeholder="Search here...">
+									<button form="form-search-top" type="button"><i class="fa fa-search" aria-hidden="true"></i></button>
+									<div class="wrap-list-cate">
+										<input type="hidden" name="product-cate" value="0" id="product-cate">
+										<a href="#" class="link-control">All Category</a>
+										<ul class="list-cate">
+											<li class="level-0">All Category</li>
+											<li class="level-1">-Electronics</li>
+											<li class="level-2">Toothbrush</li>
+											<li class="level-2">Scooter</li>
+											<li class="level-1">-Smartphone & Table</li>
+											<li class="level-2">Redmi note 9 pro </li>
+											<li class="level-2">redmi</li>
+											<li class="level-2">Table & Accessories</li>
+											<li class="level-1">-Electronics</li>
+											<li class="level-2">Batteries & Chargens</li>
+											<li class="level-2">Headphone & Headsets</li>
+											<li class="level-2">Mp3 Player & Acessories</li>
+											<li class="level-1">-Smartphone & Table</li>
+											<li class="level-2">Batteries & Chargens</li>
+											<li class="level-2">Mp3 Player & Headphones</li>
+											<li class="level-2">Table & Accessories</li>
+										</ul>
+									</div>
+								</form>
+							</div>
+						</div>
+
+						<div class="wrap-icon right-section">
+							<div class="wrap-icon-section wishlist">
+								<a href="#" class="link-direction">
+									<i class="fa fa-heart" aria-hidden="true"></i>
+									<div class="left-info">
+										<span class="index">0 item</span>
+										<span class="title">Wishlist</span>
+									</div>
+								</a>
+							</div>
+							<div class="wrap-icon-section minicart">
+								<a href="{{ url('/showmyCart') }}" class="link-direction">
+									<i class="fa fa-shopping-basket" aria-hidden="true"></i>
+									<div class="left-info">
+										<span class=""></span>
+										<span class="">CART</span>
+									</div>
+								</a>
+							</div>
+							<div class="wrap-icon-section show-up-after-1024">
+								<a href="#" class="mobile-navigation">
+									<span></span>
+									<span></span>
+									<span></span>
+								</a>
+							</div>
+						</div>
+
+					</div>
+				</div>
+					<div class="primary-nav-section">
+						<div class="container">
+							<ul class="nav primary clone-main-menu" id="mercado_main" data-menuname="Main menu" >
+								<li class="menu-item home-icon">
+									<a href="index.html" class="link-term mercado-item-title"><i class="fa fa-home" aria-hidden="true"></i></a>
+								</li>
+								<li class="menu-item">
+									<a href="about-us.html" class="link-term mercado-item-title">About Us</a>
+								</li>
+								<li class="menu-item">
+									<a href="{{ url('/detail_Product') }}" class="link-term mercado-item-title">Shop</a>
+								</li>
+								<li class="menu-item">
+									<a href="{{ url('/showmyCart') }}" class="link-term mercado-item-title">Cart</a>
+								</li>
+								<li class="menu-item">
+									<a href="{{ url('/myorder') }}" class="link-term mercado-item-title">Checkout</a>
+								</li>
+								<li class="menu-item">
+									<a href="contact-us.html" class="link-term mercado-item-title">Contact Us</a>
+								</li>																	
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+    <main id="main">
+		<div class="container">
+        @yield('content')
+    </main>
 </body>
 </html>

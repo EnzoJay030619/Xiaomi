@@ -249,9 +249,11 @@
                     <div class="card-body p-0">
                     <ul class="users-list clearfix">
                       <li>
-                        <img src="dist/img/user1-128x128.jpg" alt="User Image">
-                        <a class="users-list-name" href="#">Alexander Pierce</a>
-                        <span class="users-list-date">Today</span>
+                      @foreach ($users as $user)
+                        <img src="{{ asset('images/') }}/{{$user->image}}" alt="User Image">
+                        <a class="users-list-name" href="#">{{$user->name}}</a>
+                        <span class="users-list-date">{{$user->id}}</span>
+                        @endforeach
                       </li>
                       <li>
                     </ul>

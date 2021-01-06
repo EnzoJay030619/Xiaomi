@@ -60,6 +60,11 @@ class productController extends Controller
         return view('products')->with('products',$products);
     }
 
+    public function detail(){
+        $products=Product::all();
+        return view('detailProduct')->with('products',$products);
+    }
+
     public function edit($id){
        
         $products =Product::all()->where('id',$id);
@@ -103,6 +108,14 @@ class productController extends Controller
                // select * from products left join categories on 
         return view('showProduct')->with('products',$products);
 
+    }
+    public function showProductName($id){
+       
+        $products =Product::all()->where('id',$id);
+        //select * from products where id='$id'
+        
+        return view('productname')->with('products',$products)
+                                ->with('categories',Category::all());
     }
 
 }
